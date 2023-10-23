@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin login</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .admin{
+   
+   height:100vh;
+   display:flex;
+   flex-direction:column;
+   align-items:center;
+   /* margin-top:-25px; */ 
+}
+body{
+    background-image:url('a1.jpg');
+   background-size:cover;
+   background-position:center;
+}
+.name{
+   color:black;
+   display:flex;
+   flex-direction:column;
+   margin:100px;
+   font-size:40px;
+}
+input{
+   padding:10px;
+   border-radius:5px;
+   box-shadow:2px;
+}
+#btn{
+   margin:30px;
+   padding:10px;
+   border-radius:6px;
+   background-color:rgb(0, 238, 255);
+   font-size:20px;
+
+}
+img{
+    width:20px;
+    background:green;
+    display:flex;
+    margin-left:160px;
+    margin-top:-30px;
+}
+a{
+   font-size:1.5rem;
+   font-family:Arial, Helvetica, sans-serif;
+   color:rgb(211, 182, 52);
+   text-decoration:none;
+}
+    </style>
+</head>
+<body>
+    <a href="admin.html">Home page</a>
+    <a href="Book_rooms.html">Book rooms</a>
+    <a href="add_rooms.html">add rooms</a>
+    <a href="contact.html">contact</a>
+    <form action="\add rooms\index.html">
+    
+    <div class="admin">
+        <div class="name">
+            <label for="name">Enter name</label>
+            <input type="text" id="name" placeholder="Enter name" required>
+            <label for="password" >Password</label>
+            <input type="password" id="password" placeholder="password" minlength="8" required>
+            <img src="eye.png" id="eyeicon">
+            <button id="btn" type="submit" onclick="submit()">login</button>
+        </div>
+    </div>
+</form>
+    <script>
+         let eyeicon=document.getElementById("eyeicon");
+        let Password=document.getElementById("password");
+        eyeicon.onclick=function(){
+            if(password.type=="password"){
+                password.type="text";
+            }else{
+                password.type="password";
+            }
+        }
+        let button=document.getElementById('btn');
+        button.addEventListener('click',submit)
+        function submit(){
+           let doc = prompt("Hii","success");
+           if(doc!==null){
+            document.getElementById('btn').innerHTML=doc; 
+            }
+        }
+    </script>
+
+
+</body>
+</html>
